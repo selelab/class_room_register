@@ -1,0 +1,10 @@
+{
+    "//": "サークルに関する情報をここに入力します",
+    "TEXT": {
+        "CLUB_NAME": "テストクラブ",
+        "REPRESENT_NAME": "山田太郎",
+        "STUDENT_NUMBER": "A1234567",
+        "MAIL": "test@example.com",
+        "TEL": "080-0000-0000"
+    }
+}
