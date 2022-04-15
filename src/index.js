@@ -46,7 +46,7 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
         await action.xpath_type(xpath.MAIL, text.MAIL);//メールアドレス入力
         await action.xpath_type(xpath.TEL, text.TEL);//電話番号入力
 
-        await await action.xpath_click(xpath.SUBMIT);//フォームを送信する
+        //await action.xpath_click(xpath.SUBMIT);//フォームを送信する
     }
     await browser.close();
 
