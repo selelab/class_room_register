@@ -1,24 +1,18 @@
 {
-    "FORM_URL": "https://forms.office.com/Pages/ResponsePage.aspx?id=p-YOaaVN3E-jFrtZnYKl0scvuIIS99xNhDWSVSZ8UxNUNFROM0tBMzFBVjZNQTA5UFJXSzJDMk9TSy4u",
+    "FORM_URL": "",
     "": "",
     "//": "取りたい教室と日付を設定します",
     "//": "CLASS_ROOMは{施設略称}-{教室番号}の形式で入力",
     "//": "施設略称は、1:1号館教室、11:11号館教室、14:14号館教室、k:紀尾井坂ビル教室",
     "//": "TIMEはHH:MM〜HH:MMの形式で入力",
     "//": "NOTICESは特記事項。必須項目ではない",
-    "YEAR": "2022",
-    "MONTH": "5",
+    "YEAR": "",
+    "MONTH": "",
     "SCHEDULE": [
         {
-            "DAY": "3",
-            "CLASS_ROOM": "1-301",
-            "TIME": "10:00～14:00",
-            "NOTICES": ""
-        },
-        {
-            "DAY": "4",
-            "CLASS_ROOM": "1-201",
-            "TIME": "10:00～14:00",
+            "DAY": "",
+            "CLASS_ROOM": "",
+            "TIME": "",
             "NOTICES": ""
         }
     ]
