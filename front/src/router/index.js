@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import Home from "../views/Home.vue";
 import Club_data from "@/views/Club_data.vue";
-import Schedule from "@/views/Schedule.vue";
+import Schedules from "@/views/Schedules.vue";
 // import Send from "../views/Send.vue";
 
 const routes = [
@@ -11,9 +11,9 @@ const routes = [
     component: Club_data,
   },
   {
-    path: "/schedule",
-    name: "schedule",
-    component: Schedule,
+    path: "/schedules",
+    name: "schedules",
+    component: Schedules,
   },
 ];
 

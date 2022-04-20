@@ -1,11 +1,19 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">CLUB DATA</router-link> |
+    <router-link to="/schedule">SCHEDULE</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
-
+<script>
+export default {
+  methods: {
+    send: function () {
+      const x = 1;
+    },
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
