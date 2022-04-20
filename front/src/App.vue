@@ -9,7 +9,7 @@
 export default {
   methods: {
     send: function () {
-      const x = 1;
+      //ここにあるボタンで実行できるようにする
     },
   },
 };
