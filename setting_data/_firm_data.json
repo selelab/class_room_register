@@ -2,7 +2,12 @@
     "//": "このファイルはソフトウェア製作者が設定/更新すること",
     "OPTION": {
         "headless": false,
-        "slowMo": 10
+        "slowMo": 80,
+        "defaultViewport": {
+            "width": 1000,
+            "height": 1000
+        },
+        "args": ["--lang=ja"]
     },
     "TEXT_CHANGE": {
         "1": {
@@ -28,7 +33,8 @@
         "STUDENT_NUMBER": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[3]/div/div[2]/div/div/input",
         "GUIDE_CONF": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[4]/div/div[2]/div/div/div/label/input",
         "AVAILABILITY_CONF": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[5]/div/div[2]/div/div/div/label/input",
-        "DATE": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[8]/div/div[2]/div/div/input[1]",
+        "DATE_INPUT": "//*[@id=\"form-container\"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[8]/div/div[2]/div/div/input[1]",
+        "DATE_ICON": "//*[@id=\"form-container\"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[8]/div/div[2]/div/div/button/div",
         "TIME": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[9]/div/div[2]/div/div/input",
         "OUT_CAMPUS": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[10]/div/div[2]/div/div[2]/div/label/input",
         "NOTICES": "//div[@id='content-root']/div/div/div/div[1]/div/div[1]/div[2]/div[2]/div[11]/div/div[2]/div/div/input",

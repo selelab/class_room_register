@@ -33,7 +33,8 @@ class screenAction {
     async xpath_type(elem, value) {
         try {
             await this.page.waitForXPath(elem);
-            var xpath = await this.page.$x(elem);
+            let xpath = await this.page.$x(elem);
+            await xpath[0].focus()
             await xpath[0].type(value);
             return true;
         } catch (e) {
