@@ -17,7 +17,7 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
     const schedule_list = schedule_set.SCHEDULE;
 
     try {
-        for (schedule of schedule_list) {
+        for (let schedule of schedule_list) {
             let class_room = await schedule.CLASS_ROOM.split("-");
             let date = await action.mk_date(schedule_set.YEAR, schedule_set.MONTH, schedule.DAY);
             let building_name = await firm.TEXT_CHANGE[class_room[0]].NAME; //使用施設名
@@ -25,6 +25,7 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
             let time = await schedule.TIME;
 
             await action.page_goto(schedule_set.FORM_URL); //申請フォームへ遷移
+            console.log('フォームアクセス成功')
             await page.waitForTimeout(2000); //2秒待つ
 
             await action.xpath_type(xpath.CLUB_NAME, text.CLUB_NAME); //課外活動団体名入力
@@ -49,10 +50,14 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
             await action.xpath_type(xpath.MAIL, text.MAIL); //メールアドレス入力
             await action.xpath_type(xpath.TEL, text.TEL); //電話番号入力
 
+            console.log(`日付: ${date}\n時刻: ${time}\n利用施設: ${class_room_name}`)
+
             await Promise.all([
                 page.waitForXPath('//span[contains(text(), "ありがとうございます")]'), //送信完了を確認するまで待つ
                 action.xpath_click(xpath.SUBMIT) //フォームを送信する
             ])
+
+            console.log('フォーム送信成功')
         }
     } catch (e) {
         console.log(e)

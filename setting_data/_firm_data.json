@@ -1,7 +1,7 @@
 {
     "//": "このファイルはソフトウェア製作者が設定/更新すること",
     "OPTION": {
-        "headless": false,
+        "headless": true,
         "slowMo": 80,
         "defaultViewport": {
             "width": 1000,
