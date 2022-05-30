@@ -50,7 +50,7 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
             await action.xpath_type(xpath.MAIL, text.MAIL); //メールアドレス入力
             await action.xpath_type(xpath.TEL, text.TEL); //電話番号入力
 
-            console.log(`日付: ${date}\n時刻: ${time}\n利用施設: ${class_room_name}`)
+            console.log(`・日付: ${date}, 時刻: ${time}, 利用施設: ${class_room_name}`)
 
             await Promise.all([
                 page.waitForXPath('//span[contains(text(), "ありがとうございます")]'), //送信完了を確認するまで待つ
