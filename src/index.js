@@ -35,15 +35,14 @@ const firm = data = require(__dirname + "/../setting_data/_firm_data.json");
             await action.xpath_click(xpath.GUIDE_CONF); //「課外活動ガイドライン」と「使用可能施設一覧・申請方法」読んだ？
             await action.xpath_click(xpath.AVAILABILITY_CONF); //空き情報確認した？
 
-            await action.text_search_click(xpath.BUILDING_SET, building_name); //使用希望施設選択
+            await action.text_search_click(xpath.BUILDING_SET, building_name); //使用希望建物の選択
 
             await page.waitForTimeout(1000); //1秒待つ
-            await action.text_search_click(xpath.CLASS_ROOM_SET, class_room_name); //使用希望施設選択
+            await action.text_search_click(xpath.CLASS_ROOM_SET, class_room_name); //使用希望教室の選択
 
             await page.waitForTimeout(1000); //1秒待つ
             await action.xpath_type(xpath.DATE_INPUT, date); //日付入力
             await action.xpath_type(xpath.TIME, time); //時間入力
-            await action.xpath_click(xpath.OUT_CAMPUS); //学外団体との合同使用の有無
 
             await page.waitForTimeout(1000); //1秒待つ
             await action.xpath_type(xpath.NOTICES, schedule.NOTICES); //特記事項入力
