@@ -74,9 +74,7 @@ class screenAction {
     //xpathからテキスト取得
     async xpath_fetch_text(elem) {
         let elementHandle = await this.page.$x(elem);
-        let text = await this.page.evaluate((path) => { //一括承認画面の先頭にある端末の端末管理番号を取得
-            return path.textContent;
-        }, elementHandle[0]);
+        let text = await (await elementHandle[0].getProperty('outerText')).jsonValue(); //一括承認画面の先頭にある端末の端末管理番号を取得
         return text;
     }
 
@@ -115,7 +113,7 @@ class screenAction {
             let list_xpath = xpath_set.LIST;
             let children = await this.child_count_xpath(list_xpath);
             for (let i = 1; i <= children; i++) {
-                let text_xpath = `${list_xpath}/div[${i}]${xpath_set.TEXT}`;
+                let text_xpath = `${list_xpath}/div[${i}]`;
                 let select_xpath = `${list_xpath}/div[${i}]${xpath_set.SELECT}`;
                 let text = await this.xpath_fetch_text(text_xpath);
 
